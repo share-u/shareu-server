@@ -43,7 +43,7 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function search(Request $request) {
-        return response()->json(Article::scopeSearchArticles($request->address));
+        return response()->json(Article::scopeSearchArticles($request->query('address')));
     }
 
     /**

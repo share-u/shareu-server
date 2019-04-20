@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('articles', 'ArticleController@index');
 Route::post('articles', 'ArticleController@store');
-Route::post('articles/search', 'ArticleController@search');
+Route::get('articles/search', 'ArticleController@search');
 Route::get('articles/{article_id}', 'ArticleController@show');
 Route::post('articles/{article_id}', 'ArticleController@applicationArticle');
 Route::post('articles/{article_id}/recently', 'ArticleController@recentlyArticle');
