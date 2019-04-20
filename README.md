@@ -15,5 +15,5 @@ ENDPOINT 192.168.211.212:8000
         - dstrNmM - 시도군
             - ex) 동구
 - GET api/articles/:user_id/recently (최근 이용자가 본 클래스)
-- POST api/articles/:user_id/recently
+- POST api/articles/:article_id/recently
     - 'user_id'
