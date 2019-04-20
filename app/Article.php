@@ -16,4 +16,8 @@ class Article extends Model
     static public function scopeShowArticles(int $id) {
         return self::where('id', $id)->get();
     }
+
+    static public function scopeSearchArticles(string $address) {
+        return self::where('address', $address)->get();
+    }
 }

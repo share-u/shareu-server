@@ -40,6 +40,14 @@ class ArticleController extends Controller
 
     /**
      * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function search(Request $request) {
+        return response()->json(Article::scopeSearchArticles($request->address));
+    }
+
+    /**
+     * @param Request $request
      * @param int $id
      * @return \Illuminate\Http\JsonResponse
      */

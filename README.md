@@ -17,3 +17,6 @@ ENDPOINT 192.168.211.212:8000
 - GET api/articles/:user_id/recently (최근 이용자가 본 클래스)
 - POST api/articles/:article_id/recently
     - 'user_id'
+- POST api/articles/search (클래스 지도 검색)
+    - 'address'
+        - ex) 울산 동구
