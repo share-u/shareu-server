@@ -18,6 +18,6 @@ class Article extends Model
     }
 
     static public function scopeSearchArticles(string $address) {
-        return self::where('address', $address)->get();
+        return self::where('address', urldecode($address))->get();
     }
 }
