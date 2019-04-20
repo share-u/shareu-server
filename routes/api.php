@@ -21,7 +21,9 @@ Route::get('articles', 'ArticleController@index');
 Route::post('articles', 'ArticleController@store');
 Route::get('articles/{article_id}', 'ArticleController@show');
 Route::post('articles/{article_id}', 'ArticleController@applicationArticle');
+Route::post('articles/{article_id}/recently', 'ArticleController@recentlyArticle');
 
 Route::get('users/articles/{user_id}', 'UserController@showArticles');
+Route::get('users/articles/{user_id}/recently', 'UserController@showRecentlyArticles');
 
-Route::get('talents', 'TalentController@index');
+Route::get('talents', 'TalentController@search');

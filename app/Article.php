@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    protected $fillable = ['user_id', 'title', 'content', 'image_url', 'address'];
+    protected $fillable = ['user_id', 'category', 'title', 'content', 'image_url', 'address'];
 
     static public function scopeGetArticles() {
         return self::whereNull('withdraw_at')->get();

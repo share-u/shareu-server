@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\ArticleApplication;
+use App\RecentlyArticle;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -44,6 +45,13 @@ class ArticleController extends Controller
      */
     public function applicationArticle(Request $request, int $id) {
         return ArticleApplication::create([
+           'user_id' => $request->user_id,
+           'article_id' => $id
+        ]);
+    }
+
+    public function recentlyArticle(Request $request, int $id) {
+        return RecentlyArticle::create([
            'user_id' => $request->user_id,
            'article_id' => $id
         ]);
